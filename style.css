@@ -1,0 +1,502 @@
+/*
+*-----------------------------------------------------------
+* Template Name    : Firefly | Free psd to html conversion
+* Author           : Mehedi Hasan
+* Created          : January 2021
+* File Description : Main css file of the template
+*------------------------------------------------------------
+*/
+
+
+/***********************
+    1.BASIC
+    2.HELPER
+    3.HEADER
+    4.SLIDE
+    5.PARTNER 
+    6.SERVICE
+    7.CARREER
+    8.CONTACT
+    9.FOOTER
+    10.RESPONSIVE  => URL(CSS/RESPONSIVE.CSS)
+************************/
+
+
+
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@100;300;400;700&display=swap');
+
+/*======================
+        1.BASIC
+========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection {
+    background-color: #4caf50;
+    color: white;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 1;
+}
+a {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #303842;
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1,h2,h3,h4 {
+    color: #303842;
+    font-weight: 300;
+}
+h1 {font-size: 5.6rem;}
+h2 {font-size: 3.4rem;}
+h3 {font-size: 2.4rem;}
+h4 {
+    font-size: 1.5rem;
+    font-family: 'Open sans', sans-serif;
+    text-transform: uppercase;
+}
+p {
+    font-size: 1.4rem;
+    color: #8191a6;
+    line-height: 2rem;
+}
+ul {list-style: none;}
+.btn-primary {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 12px 0px rgba(108, 108, 108, 0.23);
+    color: #4caf50;
+    padding: 1.5rem 2.8rem;
+    border-radius: 5rem;
+    transition: 0.3s;
+}
+.btn-primary:hover {
+    background-color: #4caf50;
+    color: white;
+}
+label {
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+/*======================
+        2.HELPER CLASS
+========================*/
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    .container, .container-sm {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container, .container-sm, .container-md {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container, .container-sm, .container-md, .container-lg {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1140px;
+    }
+  }
+  .row {
+      display: flex;
+  }
+.ml-1 {margin-left: 1rem;}
+.ml-2 {margin-left: 2rem;}
+.mb-1 {margin-bottom: 1rem;}
+.mb-2 {margin-bottom: 1.5rem;}
+.mb-4 {margin-bottom: 2.5rem;}
+.mb-5 {margin-bottom: 3rem;}
+.mb-7 {margin-bottom: 4rem;}
+.bg-primary {background-color: #f5f5f5;}
+.success-number {
+    font-weight: 100;
+    font-size: 4rem;
+    display: block;
+}
+.light-bold {font-weight: 400;}
+.bold {font-weight: 600;}
+.green {color: #32d5ba;}
+.blue {color: #6dc4f2;}
+.yellow {color: #ffd13c;}
+.red {color: #f44336;}
+/*======================
+        3.HEADER 
+========================*/
+
+.header {
+    box-shadow: 0px 2px 10px 0px rgba(182, 182, 182, 0.24);
+    background-color: rgba(255, 255, 255, 0.941);
+}
+/* Quick Contact */
+.contact-quick {
+    padding: 1.4rem 0;
+    overflow: auto;
+}
+.contact-quick__social ul { display: flex;}
+.contact-quick__social .fab {
+    font-size: 1.5rem;
+    color: rgba(107, 124, 147, 0.75);
+}
+.contact-quick__social .fab:hover {color: rgba(107, 124, 147);}
+.contact-quick__phone {margin-left: auto;}
+.contact-quick__social ul li {margin-right: 2rem;}
+.contact-quick__number {display: inline-block;}
+/* Quick Contact End */
+/* Navigation Menu */
+#sideNav {display: none;}
+.navigation {
+    position: relative;
+    overflow: auto;
+ }
+.navigation::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: #f0f0f0;
+}
+
+.navigation__logo {
+    width: 16.6667%;
+    padding: 1rem 0;
+}
+.navigation__menu {
+    display: flex;
+    margin-left: auto;
+    width: 58.3333%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation__items {
+    position: relative;
+    
+}
+.navigation__items a::before {
+    content: "";
+    height: 0.2rem;
+    width: 0;
+    position: absolute;
+    top: 0;
+    background: #4caf50;
+    transition: 0.2s linear;
+}
+
+.navigation__items a {
+    padding: 28px 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+}
+.navigation__items a:last-child {padding-right: 0;}
+.navigation__items a:hover:before {
+    width: 100%;
+}
+.mobile__btn {display: none;}
+
+/*======================
+        4.SLIDE
+========================*/
+
+
+.slide {
+    background: url(img/object-1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide__content {
+    padding: 16rem 10rem 14rem;
+    text-align: center;
+}
+.slide__heading {
+    line-height: 7rem;
+    margin-bottom: 4rem;
+}
+.slide__paragraph {
+    padding: 0px 18rem;
+    margin-bottom: 3rem;
+}
+
+/*======================
+        5.PARTNER
+========================*/
+.partner {
+    padding: 4rem;
+    overflow: auto;
+    position: relative;
+    margin-bottom: 6rem;
+}
+.partner::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #f0f0f0;
+    top: 0;
+    left: 0;
+}
+.partner::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #f0f0f0;
+    bottom: 0;
+    left: 0;
+}
+.partner__text {
+    width: 40%;
+}
+.partner__img {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partner__logo:last-child {
+    transform: translate(0px, 1.2rem);
+}
+
+
+
+/*======================
+        6.SERVICE
+========================*/
+
+.service {position: relative;}
+.service__hero {
+    position: absolute;
+    width: 40%;
+}
+.service__img {width: 100%;}
+.service__content {
+    width: 60%;
+    margin-left: auto;
+    padding: 4rem 0;
+}
+.section__title {
+    margin-bottom: 6rem;
+}
+.service__facility .facility:last-child {
+    width: 46%;
+    margin-left: auto;
+}
+.facility {
+    overflow: auto;
+    display: flex;
+    width: 50%;
+    transition: 0.2s;
+}
+.facility--hover-1:hover .fa-biking {color: #4caf50;}
+.facility--hover-2:hover .fa-lightbulb {color: #4caf50;}
+.facility--hover-3:hover .fa-paperclip {color: #4caf50;}
+.facility--hover-4:hover .fa-check-square {color: #4caf50;}
+
+.facility__icon {
+    font-size: 2rem;
+}
+.facility__text {
+    margin-left: 2rem;
+    padding-left: 2rem;
+}
+.facility__heading {font-weight: 600;}
+
+/*======================
+        7.CARREER
+========================*/
+
+.carrier {
+    position: relative;
+    padding: 25rem 0;
+    clip-path: polygon(0 11%, 100% 0%, 100% 87%, 0% 100%);
+}
+.carrier__content {
+    width: 60%;
+}
+.success {width: 50%;}
+.carrier__hero {
+    position: absolute;
+    right: 0;
+    top: 12%;
+}
+
+/*======================
+        8.CONTACT
+========================*/
+
+.contact {
+    position: relative;
+    padding: 3rem 0 14rem 0;
+    background: url(img/object-2.png);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.contact__title {
+    width: 60%;
+    text-align: center;
+    margin-left:  auto;
+    margin-right: auto;
+}
+.form {
+    border-radius: 1rem;
+    padding: 7rem 6rem;
+    width: 66.6667%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 28px 0px rgba(183, 183, 183, 0.45);
+    background-color: white;
+    position: relative;
+    z-index: 99;
+}
+.form> :not(:last-child) {margin-bottom: 3rem;}
+.form__input {
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    padding: 2rem 1rem;
+}
+.form__first-name {width: 48%;}
+.form__last-name {
+    width: 48%;
+    margin-left: auto;
+}
+.contact::after {
+    content: '';
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: #f5f5f5;
+    z-index: 1;
+    clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+/*======================
+        9.FOOTER
+========================*/
+.footer {
+    padding: 8rem 0;
+    position: relative;
+}
+.footer::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #dfe6e9;
+    position: absolute;
+    top: 0;
+}
+
+.footer__text { width: 33.3333%;}
+.footer__text-btn a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.footer__text-btn a:first-child{margin-right: 3rem;}
+.footer__category,.footer__community { width: 16.6667%;}
+.footer__category { margin-left: auto;}
+.footer__category a,.footer__community a,.footer__follow i {
+    color: #8191a6;
+    transition: 0.3s;
+}
+.footer__category a:hover,.footer__community a:hover,.footer__follow i:hover {
+    color: black;
+}
+.footer__social i {font-size: 2.5rem;}
+.footer__social> :not(:first-child) {
+    margin-left: 2rem;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+}
+.animate__fadeIn {
+    animation: fadeIn 2s;
+}
+.animate__fadeInLeft{
+    animation: fadeInLeft 2s;
+}
+.animation-delay-1 {animation-delay: 0.1s;}
+.animation-delay-2 {animation-delay: 0.3s;}
+.animation-delay-3 {animation-delay: 0.4s;}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -30%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-10%, 0, 0);
+      transform: translate3d(-10%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+
+
+
+  
